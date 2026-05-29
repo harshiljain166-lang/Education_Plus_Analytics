@@ -199,7 +199,7 @@ with col5:
         plot_bgcolor='rgba(0,0,0,0)'
     )
 
-    st.plotly_chart(gender_chart, use_container_width=True)
+    st.plotly_chart(gender_chart, st.plotly_chart(fig, width="stretch"))
 
 with col6:
     stage_chart = px.bar(
@@ -218,7 +218,7 @@ with col6:
         showlegend=False
     )
 
-    st.plotly_chart(stage_chart, use_container_width=True)
+    st.plotly_chart(stage_chart, st.plotly_chart(fig, width="stretch"))
 
 # ---------------- 3D VISUALIZATION ----------------
 st.markdown("## 🚀 3D Student Performance Visualization")
@@ -247,7 +247,7 @@ fig_3d.update_layout(
     )
 )
 
-st.plotly_chart(fig_3d, use_container_width=True)
+st.plotly_chart(fig_3d, st.plotly_chart(fig, width="stretch"))
 
 # ---------------- HEATMAP ----------------
 st.markdown("## 📊 Correlation Intelligence Matrix")
@@ -280,7 +280,7 @@ heatmap.update_layout(
     plot_bgcolor='rgba(0,0,0,0)'
 )
 
-st.plotly_chart(heatmap, use_container_width=True)
+st.plotly_chart(heatmap, st.plotly_chart(fig, width="stretch"))
 
 # ---------------- PERFORMANCE ANALYSIS ----------------
 col7, col8 = st.columns(2)
@@ -301,7 +301,7 @@ with col7:
         plot_bgcolor='rgba(0,0,0,0)'
     )
 
-    st.plotly_chart(performance_chart, use_container_width=True)
+    st.plotly_chart(performance_chart, st.plotly_chart(fig, width="stretch"))
 
 with col8:
     topic_chart = px.treemap(
@@ -319,7 +319,7 @@ with col8:
         title_font_size=22
     )
 
-    st.plotly_chart(topic_chart, use_container_width=True)
+    st.plotly_chart(topic_chart, st.plotly_chart(fig, width="stretch"))
 
 # ---------------- ADVANCED ANALYTICS ----------------
 st.markdown("## 📈 Student Behaviour Insights")
@@ -341,11 +341,11 @@ behavior_chart.update_layout(
     title_font_size=22
 )
 
-st.plotly_chart(behavior_chart, use_container_width=True)
+st.plotly_chart(behavior_chart, st.plotly_chart(fig, width="stretch"))
 
 # ---------------- RAW DATA ----------------
 with st.expander("🔍 Explore Raw Dataset"):
-    st.dataframe(filtered_df, use_container_width=True)
+    st.dataframe(filtered_df, st.plotly_chart(fig, width="stretch"))
 
 # ---------------- FOOTER ----------------
 st.markdown(

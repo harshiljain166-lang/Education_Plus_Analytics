@@ -218,7 +218,7 @@ with col6:
         showlegend=False
     )
 
-    st.plotly_chart(stage_chart, st.plotly_chart(fig, width="stretch"))
+    st.plotly_chart(stage_chart, use_container_width=True)
 
 # ---------------- 3D VISUALIZATION ----------------
 st.markdown("## 🚀 3D Student Performance Visualization")
@@ -345,7 +345,7 @@ st.plotly_chart(behavior_chart, st.plotly_chart(fig, width="stretch"))
 
 # ---------------- RAW DATA ----------------
 with st.expander("🔍 Explore Raw Dataset"):
-    st.dataframe(filtered_df, st.plotly_chart(fig, width="stretch"))
+    st.dataframe(filtered_df, use_container_width=True)
 
 # ---------------- FOOTER ----------------
 st.markdown(

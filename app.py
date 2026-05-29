@@ -199,7 +199,7 @@ with col5:
         plot_bgcolor='rgba(0,0,0,0)'
     )
 
-    st.plotly_chart(gender_chart, width="stretch"))
+    st.plotly_chart(gender_chart, width="stretch")
 
 with col6:
     stage_chart = px.bar(

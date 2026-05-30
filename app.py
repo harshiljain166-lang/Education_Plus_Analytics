@@ -247,7 +247,7 @@ fig_3d.update_layout(
     )
 )
 
-st.plotly_chart(fig_3d, st.plotly_chart(fig, width="stretch"))
+st.plotly_chart(fig_3d, use_container_width=True)
 
 # ---------------- HEATMAP ----------------
 st.markdown("## 📊 Correlation Intelligence Matrix")
@@ -280,7 +280,7 @@ heatmap.update_layout(
     plot_bgcolor='rgba(0,0,0,0)'
 )
 
-st.plotly_chart(heatmap, st.plotly_chart(fig, width="stretch"))
+st.plotly_chart(heatmap, use_container_width=True)
 
 # ---------------- PERFORMANCE ANALYSIS ----------------
 col7, col8 = st.columns(2)
@@ -301,7 +301,7 @@ with col7:
         plot_bgcolor='rgba(0,0,0,0)'
     )
 
-    st.plotly_chart(performance_chart, st.plotly_chart(fig, width="stretch"))
+    st.plotly_chart(performance_chart, use_container_width=True)
 
 with col8:
     topic_chart = px.treemap(
@@ -319,7 +319,7 @@ with col8:
         title_font_size=22
     )
 
-    st.plotly_chart(topic_chart, st.plotly_chart(fig, width="stretch"))
+    st.plotly_chart(topic_chart, use_container_width=True)
 
 # ---------------- ADVANCED ANALYTICS ----------------
 st.markdown("## 📈 Student Behaviour Insights")
@@ -341,7 +341,7 @@ behavior_chart.update_layout(
     title_font_size=22
 )
 
-st.plotly_chart(behavior_chart, st.plotly_chart(fig, width="stretch"))
+st.plotly_chart(behavior_chart, use_container_width=True)
 
 # ---------------- RAW DATA ----------------
 with st.expander("🔍 Explore Raw Dataset"):
